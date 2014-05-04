@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://keybler/locale/prefs.dtd">
+
+<!--
+   - ***** BEGIN LICENSE BLOCK *****
+   - 
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   - 
+   - Copyright (C) 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+   - 
+   - ***** END LICENSE BLOCK *****
+-->
+
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<setting pref="caligon.keybler.sortByFolder"         type="bool"     title="Group keywords by folder">
+		Group keywords by the folder they are bookmarked in.
+	</setting>
+	<setting pref="caligon.keybler.collapseEmptyFolders" type="bool"     title="Roll-up folders">
+		When folder grouping is enabled, roll-up folders that only contain a single child folder.
+	</setting>
+	<setting pref="caligon.keybler.sortByName"           type="bool"     title="Sort keywords alphabetically">
+		Sort keywords alphabetically. Otherwise, they maintain the older in which they appear in the Library.
+	</setting>
+	<setting pref="caligon.keybler.openIn"               type="menulist" title="Open search results in">
+		<menulist>
+			<menupopup>
+				<menuitem value="current" label="Current tab"/>
+				<menuitem value="tab" label="New Tab"/>
+				<menuitem value="background-tab" label="Background Tab"/>
+				<menuitem value="window" label="New Window"/>
+			</menupopup>
+		</menulist>
+	</setting>
+</vbox>
+

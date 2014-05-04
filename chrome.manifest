@@ -1,0 +1,25 @@
+# ***** BEGIN LICENSE BLOCK *****
+# 
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+# 
+# Copyright (C) 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+# 
+# ***** END LICENSE BLOCK *****
+
+# Content registration
+content	keybler			chrome/content/
+
+# Locale registration
+locale	keybler	en-US		chrome/locale/en-US/
+
+# Browser overlays
+overlay	chrome://browser/content/browser.xul		chrome://keybler/content/overlay.xul
+
+# XPCOM registration
+interfaces	components/keybler.xpt
+component	{a7b6ce09-16eb-4251-b72c-47b0659bd4fd}	components/keybler.js
+contract	@caligonstudios.com/keybler;1		{a7b6ce09-16eb-4251-b72c-47b0659bd4fd}
+category	profile-after-change keybler		@caligonstudios.com/keybler;1
+

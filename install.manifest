@@ -1,0 +1,27 @@
+# ***** BEGIN LICENSE BLOCK *****
+# 
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+# 
+# Copyright (C) 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+# 
+# ***** END LICENSE BLOCK *****
+
+# RDF metadata
+id=keybler@caligonstudios.com
+version=2013.08.18.22a
+type=2
+creator=Sparky Bluefang
+optionsType=2
+optionsURL=chrome://keybler/content/prefs.xul
+#iconURL=chrome://keybler/skin/keybler32.png
+
+# App data
+defaultLocale=en-US
+Firefox=24.0|32.0a1
+
+# Build data
+name=keybler
+files=chrome defaults chrome.manifest install.rdf components/*.js LICENSE
+

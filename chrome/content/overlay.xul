@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE overlay>
+
+<!--
+   - ***** BEGIN LICENSE BLOCK *****
+   - 
+   - This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/.
+   - 
+   - Copyright (C) 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+   - 
+   - ***** END LICENSE BLOCK *****
+-->
+
+<overlay id="keybler-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="bundle_keybler" src="chrome://keybler/locale/overlay.properties" />
+	</stringbundleset>
+
+	<script type="application/javascript" src="chrome://keybler/content/overlay.js" />
+
+	<popup id="contentAreaContextMenu">
+		<menu id="context-keybler-menu"
+		      insertafter="context-searchselect"
+		      oncommand="caligon.keybler.onCommand(event);"
+		      onclick="caligon.keybler.onCommand(event);" />
+	</popup>
+</overlay>
+

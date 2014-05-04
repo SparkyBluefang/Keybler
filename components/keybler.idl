@@ -1,0 +1,29 @@
+/*
+ * ***** BEGIN LICENSE BLOCK *****
+ * 
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ * 
+ * Copyright (C) 2014 Matthew Turnbull <sparky@bluefang-logic.com>. All Rights Reserved.
+ * 
+ * ***** END LICENSE BLOCK *****
+*/
+
+#include "nsISupports.idl"
+
+interface nsIDOMWindow;
+
+[scriptable, uuid(a7b6ce09-16eb-4251-b72c-47b0659bd4fd)]
+interface nsIKeybler : nsISupports
+{
+	readonly attribute long maxMenuItemLength;
+	readonly attribute ACString openIn;
+	readonly attribute boolean openInBackground;
+
+	void rebuild(in boolean updateWindows);
+	void dumpJSON(in nsIDOMWindow win);
+	void updateWindow(in nsIDOMWindow win);
+	void launchOptions(in nsIDOMWindow currentWindow);
+};
+
