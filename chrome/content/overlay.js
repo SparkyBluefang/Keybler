@@ -135,11 +135,13 @@ window.addEventListener("load", function buildKeybler()
 
 		return Task.spawn(function()
 		{
-			let data = yield getShortcutOrURIAndPostData(aKeyword + " " + aText);
+			let data = yield (Services.vc.compare("31.*", Services.appinfo.version) < 0)
+				? new Promise(resolve => getShortcutOrURIAndPostData(aKeyword + " " + aText, resolve))
+				: getShortcutOrURIAndPostData(aKeyword + " " + aText);
 
 			if(aTarget == "window")
 			{
-				let win = aWindow.openDialog(getBrowserURL(), "_blank", "chrome,all,dialog=no", url, null, null, postData);
+				let win = aWindow.openDialog(getBrowserURL(), "_blank", "chrome,all,dialog=no", url, null, null, data.postData);
 				throw new Task.Result(win);
 			}
 			else

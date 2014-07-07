@@ -19,7 +19,7 @@ optionsURL=chrome://keybler/content/prefs.xul
 
 # App data
 defaultLocale=en-US
-Firefox=24.0|32.0a1
+Firefox=30.0|33.0a1
 
 # Build data
 name=keybler
