@@ -9,17 +9,18 @@
 # ***** END LICENSE BLOCK *****
 
 # Content registration
-content	keybler			chrome/content/
+content	 keybler chrome/content/
+resource keybler modules/
 
 # Locale registration
-locale	keybler	en-US		chrome/locale/en-US/
+locale keybler en-US chrome/locale/en-US/
 
 # Browser overlays
-overlay	chrome://browser/content/browser.xul		chrome://keybler/content/overlay.xul
+overlay	chrome://browser/content/browser.xul chrome://keybler/content/overlay.xul
 
 # XPCOM registration
-interfaces	components/keybler.xpt
-component	{a7b6ce09-16eb-4251-b72c-47b0659bd4fd}	components/keybler.js
-contract	@caligonstudios.com/keybler;1		{a7b6ce09-16eb-4251-b72c-47b0659bd4fd}
-category	profile-after-change keybler		@caligonstudios.com/keybler;1
+interfaces components/keybler.xpt
+component  {a7b6ce09-16eb-4251-b72c-47b0659bd4fd} components/keybler.js
+contract   @caligonstudios.com/keybler;1          {a7b6ce09-16eb-4251-b72c-47b0659bd4fd}
+category   profile-after-change keybler           @caligonstudios.com/keybler;1
 

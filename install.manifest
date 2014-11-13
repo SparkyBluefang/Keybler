@@ -19,9 +19,9 @@ optionsURL=chrome://keybler/content/prefs.xul
 
 # App data
 defaultLocale=en-US
-Firefox=30.0|33.0a1
+Firefox=31.0|36.0a1
 
 # Build data
 name=keybler
-files=chrome defaults chrome.manifest install.rdf components/*.js LICENSE
+files=chrome defaults chrome.manifest install.rdf components/*.js modules LICENSE
 

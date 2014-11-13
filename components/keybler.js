@@ -10,6 +10,8 @@
  * ***** END LICENSE BLOCK *****
 */
 
+"use strict";
+
 // Component constants
 const CC = Components.classes;
 const CI = Components.interfaces;
